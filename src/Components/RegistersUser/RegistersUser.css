@@ -1,0 +1,37 @@
+.review-container{
+    
+   
+}
+.review-details{
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-column-gap: 40px;
+    width: 457px;
+    border: 1px solid #ccc;
+    height: 220px;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+   
+}
+.review-content{
+    padding-top: 20px;
+}
+.image img {
+    border-radius: 10px;
+}
+.review-content h2{
+    font-size:20px
+}
+.review-content h3{
+    font-size:14px
+}
+
+
+/* .MuiButton-containedPrimary {
+    color: #000000 !important;
+    background-color: #E3E3E3 !important;
+    margin-top: 50px !important;
+} */

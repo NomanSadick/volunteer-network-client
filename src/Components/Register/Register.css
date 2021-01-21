@@ -1,0 +1,32 @@
+
+.logo{
+    width: 202.81px;
+    height: 60px;
+    left: 88px;
+    top: 44px;
+}
+.register-container{
+    text-align: center;
+    
+}
+
+.register-content {
+    margin: 70px auto;
+    width: 570px;
+    border: 1px solid #ababab;
+    border-radius: 4px;
+    padding: 25px 50px;
+    
+}
+.register-heading {
+    font-size: 24px;
+    text-align: left;
+}
+
+.registration-btn {
+    margin-top: 20px !important;
+    display: block;
+    background-color: #3F90FC !important;
+}.register-input {
+    width: 100%;
+}
