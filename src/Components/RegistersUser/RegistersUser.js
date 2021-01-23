@@ -34,7 +34,7 @@ const RegistersUser = (props) => {
                     <h2>{props.user?.[0]?.title}</h2>
                     <h3>{props.user.checkIn}</h3>
                     {props.user?.[0]?._id}
-                    <Button   onClick={()=>deleteRegistersUser(`${props.user?.[0]?._id}`)} variant="contained" color="primary">Cancel</Button>
+                    <Button   onClick={()=>deleteRegistersUser(`${props.user?._id}`)} variant="contained" color="primary">Cancel</Button>
                 </div>
             </div>
         </div>
