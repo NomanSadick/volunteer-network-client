@@ -13,6 +13,11 @@ import Register from './Components/Register/Register';
 import { createContext, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Review from './Components/Review/Review';
+import Navbar from './Components/Navber/Navbar';
+import Home from './Components/Home/Home';
+import Admin from './Components/Admin/Admin';
+import VRegisterList from './Components/VRegisterList/VRegisterList';
+import AddEvent from './Components/AddEvent/AddEvent';
 
 export const UserContext = createContext();
 
@@ -28,8 +33,8 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-          <Route path="/header">
-            <Header></Header>
+        <Route exact path="/">
+            <Home></Home>
           </Route>
           <Route path="/login">
             <Login></Login>
@@ -37,16 +42,19 @@ function App() {
           <Route path="/review">
             <Review></Review>
           </Route>
+          <Route path="/admin">
+            <Admin></Admin>
+          </Route>
+          <Route path="/addEvent">
+            <AddEvent></AddEvent>
+          </Route>
           <Route path="/register">
             <Register></Register>
           </Route>
-      
           <PrivateRoute path="/:id">
             <Register></Register>
           </PrivateRoute>
-          <Route path="/">
-            <Header></Header>
-          </Route>
+         
         </Switch>
       </Router>
     </UserContext.Provider>

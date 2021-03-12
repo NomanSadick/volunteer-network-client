@@ -16,12 +16,12 @@ import { Link } from 'react-router-dom';
 const Details = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [allEvents, setAllEvents] = useState([]);
-    
+
 
     const handleAddEvents = () => {
 
     }
-    
+
 
     useEffect(() => {
         fetch('http://localhost:5000/allEvents')
@@ -31,11 +31,10 @@ const Details = () => {
     console.log(allEvents);
 
     return (
-        <div className="details-container ">
+        <div className="details-container">
 
             {
-               
-                 
+
                 allEvents.map(activity =>
                     <Link to={`/${activity._id}`}>
                         <Card className="activities" onClick={handleAddEvents}>
@@ -51,19 +50,7 @@ const Details = () => {
 
                         </Card>
                     </Link>
-                )}
-
-
-            {/* {
-                volunteerActivities.map(activity =>
-
-                    <div className="activities">
-                            <img src={activity.image} alt="" />
-                            <h2> {activity.name} </h2>
-                            
-                    </div>
-
-                )} */}
+            )}
 
         </div>
     );

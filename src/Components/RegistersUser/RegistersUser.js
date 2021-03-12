@@ -10,31 +10,28 @@ import Navbar from '../Navber/Navbar';
 const RegistersUser = (props) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     console.log(props.user);
-    const deleteRegistersUser = (id) =>{
+    const deleteRegistersUser = (id) => {
         console.log(id);
         fetch(`http://localhost:5000/deleteRegistersUser/${id}`, {
             method: 'DELETE'
         })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     }
-// console.log(props.user?.[0]._id);
+    // console.log(props.user?.[0]._id);
     return (
-
-        <div className="review-container">
-
-
+        <div className="review-container col-md-6 d-flex justify-content-center">
             <div className="review-details">
                 <div className="image">
                     <img src={props.user?.[0]?.image} alt="" />
                 </div>
                 <div className="review-content">
                     <h2>{props.user?.[0]?.title}</h2>
-                    <h3>{props.user.checkIn}</h3>
+                    <h3>{(new Date(props.user.checkIn).toDateString('dd/mm/yyyy'))}</h3>
                     {props.user?.[0]?._id}
-                    <Button   onClick={()=>deleteRegistersUser(`${props.user?._id}`)} variant="contained" color="primary">Cancel</Button>
+                    <Button onClick={() => deleteRegistersUser(`${props.user?._id}`)} variant="contained" color="primary">Cancel</Button>
                 </div>
             </div>
         </div>

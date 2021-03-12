@@ -1,0 +1,14 @@
+.header-container{
+    background-image: url(../../images/anna-earl-J-Jb1niw1j0-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 500px;
+
+}
+.header-overlay{
+    background-color: rgb(255, 255, 255, 0.9);
+    height: 100%;
+    width: 100%;
+    
+}
